@@ -1,6 +1,8 @@
-namespace Shelter
+using System;
+
+namespace Shelter.Models
 {
-  public class Shelter
+  public class Animal
   {
     public int AnimalId { get; set; }
     public string Name { get; set; }

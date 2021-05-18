@@ -3,6 +3,7 @@
 }
 
 @using Shelter.Models;
+@model List<Shelter.Models.Animal>;
 
 <h1>Animals</h1>
 
@@ -15,7 +16,7 @@ else
   <ol>
   @foreach (Animal animal in Model)
   {
-    <li>@animal.Name</li>
+    <li>@Html.ActionLink($"{@animal.Name}", "Detials", new { id = animal.AnimalId })</li>
     <ul>
       <li>@animal.Gender</li>
       <li>@animal.AdmitDate</li>
@@ -24,3 +25,4 @@ else
   }
   </ol>
 }
+<p>@Html.ActionLink("Add new animal tenet", "Create")</p>
