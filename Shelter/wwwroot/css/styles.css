@@ -1,0 +1,37 @@
+body {
+  text-align: center;
+  background-color: rgb(0, 119, 255);
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+a:link {
+  color: greenyellow;
+}
+
+ul,
+ol {
+  text-align: left;
+}
+
+ol {
+  max-width: 1500px;
+  margin: 0 auto;
+  margin-left: 30%;
+}
+
+button,
+a:visited {
+  color: white;
+  padding: 3%;
+}
+
+div#footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  color: #ccc;
+  background: #333;
+  padding: 8px;
+}

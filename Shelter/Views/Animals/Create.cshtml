@@ -8,13 +8,16 @@
 @using (Html.BeginForm())
 {
   @Html.LabelFor(model => model.Name)
-  @Html.TextBoxFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name, new{@class = "form-control"})
   @Html.LabelFor(model => model.Gender)
-  @Html.TextBoxFor(model => model.Gender)
+  @Html.TextBoxFor(model => model.Gender, new{@class = "form-control"})
   @Html.LabelFor(model => model.AdmitDate)
-  @Html.TextBoxFor(model => model.AdmitDate, "{0:MM/dd/yyyy}", new{@class = "datepicker form-control input-datepicker", placeholder = "dd/mm/yyyy", data_date_format = "dd/mm/yyyy", type = "date"})
+  @Html.TextBoxFor(model => model.AdmitDate, new{@class = "datepicker form-control input-datepicker",
+placeholder = "dd/mm/yyyy", data_date_format = "dd/mm/yyyy", type = "date"})
   @Html.LabelFor(model => model.Breed)
-  @Html.TextBoxFor(model => model.Breed)
-  <input type="submit" value="Add new animal tenet" />
+  @Html.TextBoxFor(model => model.Breed, new{@class = "form-control"})
+  <br>
+  <input type="submit" value="Add new animal tenet" class="btn btn-success" />
 }
-<p>@Html.ActionLink("Show all animal tenets", "Index")</p>
+<br>
+<button class="btn btn-primary">@Html.ActionLink("Show all animal tenets", "Index")</button>
